@@ -9,9 +9,7 @@
 # 2. clap your hands three times - the robot will turn off his light.
 
 
-led=led_ctrl
-define=rm_define
-
+# the colour number.
 l1,l2=0,255
 
 def start():
