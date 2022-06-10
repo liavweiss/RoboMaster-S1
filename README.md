@@ -21,7 +21,7 @@ In this part of the project we will present the ability of the robot to change l
 In this part of the project we will present the ability of the robot to follow a line.
 In this code the robot will follow a red line, but you can easily change the color
 of the line that the robot is following using line_follow_color_<color> located on line 30.
-First we lower the gimbal to look at the floor and after that as soon as the robot detects the red line it will move towards it, we have chosen the speed of the robot to be slower so that the robot can make sharp turns.
+First we lower the gimbal to look at the floor and after that as soon as the robot detects the red line it will move towards it, we have chosen the speed of the robot to be slower so that the robot can make sharp turns. 
 
 ---------------------------------------------------
 #### Follow and shot a person:
