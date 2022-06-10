@@ -1,3 +1,19 @@
+#################################################################################################################
+#                                           RoboMaster Project                                                  #
+#                                                                                                               #
+#                                   Amichai Kafka & Liav weiss & Omer Michael                                   #
+#################################################################################################################
+
+# In this part of the project we will present the robot's ability to track and shoot a robot.
+# First we want to control the chassis the and gimbal manual, after that we will Enable detection of robot.
+# We will set the gimbal rotation speed to the maximum possible, for fast object.
+# We will set the travel mode to free mode so we can automatically rotate the gimbal.
+# To truck after the robot we will need to save his previous possitions and his current position.
+# After that as long as we recognize the robot we will track his location and shoot at him non-stop,
+# as soon as the robot comes out of the robot's mediator of vision the robot will stop and wait (to use as little battery of the robot as possible).
+
+
+
 def start():
     # Enable manual control of chassis and gimbal.
     chassis_ctrl.enable_stick_overlay()
@@ -51,9 +67,7 @@ def start():
             x = robotList[2]
             y = robotList[3]
            
-            # Robot detection is currently too slow. Make sure that we do not
-            # overshoot the target because we think we did not move. Note there
-            # are cases this will fail miserably, but they are unlikelly.
+            # Robot detection is currently too slow.
             if abs(x - prevX) < 0.03 and abs(y - prevY) < 0.03:
                 # It does not look like we got new values. Get robot
                 # info again.
@@ -82,5 +96,4 @@ def start():
                 # Fire!
                 gun_ctrl.fire_once()
         else:
-            # gimbal.rotate_with_speed(0,0)
             chassis_ctrl.stop()
