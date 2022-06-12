@@ -1,3 +1,15 @@
+#################################################################################################################
+#                                           RoboMaster Project                                                  #
+#                                                                                                               #
+#                                   Amichai Kafka & Liav weiss & Omer Michael                                   #
+#################################################################################################################
+
+# In this part of the project we will present the ability of the robot to search for a mark follow and shot him.
+# First we want to rotate the gimbal to see if we recognize any marker,
+# as soon as we see a certain marker we will save it and rotate the gimbal again until we recognize the same marker,
+# as soon as we recognize the same marker we will make a slow move to it and shoot at it.
+# It is important to note that if we see on the way another marker we will ignore it.
+
 pid_x = rm_ctrl.PIDCtrl()
 pid_y = rm_ctrl.PIDCtrl()
 pid_Pitch = rm_ctrl.PIDCtrl()
@@ -8,15 +20,6 @@ variable_Post = 0
 list_MarkerList = RmList()
 pid = rm_ctrl.PIDCtrl()
 
-
-# def vision_recognized_marker_trans_red_heart(msg):
-
-#         led_ctrl.set_flash(rm_define.armor_all,2)
-
-#         led_ctrl.set_top_led(rm_define.armor_top_all,255,0,0,rm_define.effect_flash)
-#         led_ctrl.set_bottom_led(rm_define.armor_bottom_all,255,0,0,rm_define.effect_flash)
-#         chassis_ctrl.stop()
-#         time.sleep(1)
 
 def recognize_marker():
     gimbal_ctrl.rotate_with_speed(270, 0.3)
@@ -34,23 +37,19 @@ def recognize_marker():
 def shoot_marker(marker):
     V_avg = 1
     k = 0.65
-    print("befor")
     # time.sleep(5)
     gimbal_ctrl.rotate_with_speed(-50, 0.3)
-    print("afetr")
     time.sleep(5)
     # chassis_ctrl.move_with_time(0,1)
     while True:
         print(marker)
         list_MarkerList = RmList(vision_ctrl.get_marker_detection_info())
-
         # vision_ctrl.cond_wait(rm_define.cond_recognized_marker_trans_red_heart)
         print(list_MarkerList)
         # list_MarkerList[1]=1
         # print("_______")
         if list_MarkerList[1] == 1 and list_MarkerList[2] == marker:
             print(list_MarkerList)
-            print("xxxxx")
             robot_ctrl.set_mode(rm_define.robot_mode_chassis_follow)
             variable_x = list_MarkerList[4]
             # pid.set_error(variable_x - 0.5)
@@ -95,5 +94,3 @@ def start():
     chassis_ctrl.set_trans_speed(0.3)
     marker = recognize_marker()
     shoot_marker(marker)
-    # chassis_ctrl.stop()
-    # gimbal_ctrl.rotate_with_degree(rm_define.gimbal_up,5)

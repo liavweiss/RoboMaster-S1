@@ -1,5 +1,11 @@
-# Make Robomaster fire his blaster every time he sees a person. Set the vision marker
-# detection distance from 0.5 to 3 for farther distances.
+#################################################################################################################
+#                                           RoboMaster Project                                                  #
+#                                                                                                               #
+#                                   Amichai Kafka & Liav weiss & Omer Michael                                   #
+#################################################################################################################
+
+# In this part of the project we will present the robot's ability to fire his blaster every time he sees a person.
+# Set the vision marker detection distance from 0.5 to 3 for farther distances.
 
 def start():
     led1, led2 = 255, 100
