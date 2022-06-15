@@ -52,6 +52,7 @@ def start():
         media_ctrl.cond_wait(rm_define.cond_sound_recognized_applause_twice)
         red()
 
+
         media_ctrl.cond_wait(rm_define.cond_sound_recognized_applause_twice)
         yellow()
 

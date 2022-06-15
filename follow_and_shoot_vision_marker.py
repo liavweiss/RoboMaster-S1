@@ -6,17 +6,18 @@ variable_X = 0
 variable_Y = 0
 variable_Post = 0
 list_MarkerList = RmList()
-pid = rm_ctrl.PIDCtrl()
 
 
-# def vision_recognized_marker_trans_red_heart(msg):
+# pid=rm_ctrl.PIDCtrl()
+def vision_recognized_marker_trans_red_heart(msg):
+    led_ctrl.set_flash(rm_define.armor_all, 2)
 
-#         led_ctrl.set_flash(rm_define.armor_all,2)
+    led_ctrl.set_top_led(rm_define.armor_top_all, 255, 0, 0, rm_define.effect_flash)
+    led_ctrl.set_bottom_led(rm_define.armor_bottom_all, 255, 0, 0, rm_define.effect_flash)
+    # chassis_ctrl.stop()
+    # time.sleep(1)
 
-#         led_ctrl.set_top_led(rm_define.armor_top_all,255,0,0,rm_define.effect_flash)
-#         led_ctrl.set_bottom_led(rm_define.armor_bottom_all,255,0,0,rm_define.effect_flash)
-#         chassis_ctrl.stop()
-#         time.sleep(1)
+
 def start():
     global variable_X
     global variable_Y
@@ -36,18 +37,12 @@ def start():
     while True:
         # print("aaa")
         list_MarkerList = RmList(vision_ctrl.get_marker_detection_info())
-        # vision_ctrl.cond_wait(rm_define.cond_recognized_marker_trans_red_heart)
         print(list_MarkerList)
-        # list_MarkerList[1]=1
+
         if list_MarkerList[1] == 1:
             print("xxxxx")
             robot_ctrl.set_mode(rm_define.robot_mode_chassis_follow)
-            variable_x = list_MarkerList[4]
-            # pid.set_error(variable_x - 0.5)
-            # gimbal.rotate_with_speed(pid.get_output(),0)
-            vision_ctrl.set_marker_detection_distance(1)
-            v = (V_avg - (k * abs(list_MarkerList[3] / 180)))
-            chassis_ctrl.set_trans_speed(v * 0.5)
+            chassis_ctrl.set_trans_speed(0.3)
             chassis_ctrl.move(0)
             variable_X = list_MarkerList[3]
             variable_Y = list_MarkerList[4]
@@ -67,4 +62,3 @@ def start():
         else:
             # gimbal_ctrl.rotate_with_speed(0,0)
             chassis_ctrl.stop()
-            # gimbal_ctrl.rotate_with_degree(rm_define.gimbal_up,5)
