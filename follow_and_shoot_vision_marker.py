@@ -15,7 +15,6 @@ def vision_recognized_marker_trans_red_heart(msg):
     led_ctrl.set_top_led(rm_define.armor_top_all, 255, 0, 0, rm_define.effect_flash)
     led_ctrl.set_bottom_led(rm_define.armor_bottom_all, 255, 0, 0, rm_define.effect_flash)
     # chassis_ctrl.stop()
-
     # time.sleep(1)
 
 
@@ -63,3 +62,4 @@ def start():
         else:
             # gimbal_ctrl.rotate_with_speed(0,0)
             chassis_ctrl.stop()
+            # gimbal_ctrl.rotate_with_degree(rm_define.gimbal_up,5)
