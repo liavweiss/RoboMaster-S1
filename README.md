@@ -11,7 +11,7 @@ The robot abilities:
 * Follow after line.
 * Follow and shot a person.
 * Follow and shot a robot.
-* Follow and shot a marker
+* Detect and shot a marker
 ---------------------------------------------------
 #### Change light with simple claps hand:
 In this part of the project we will present the ability of the robot to change lighting with simple claps hand.
@@ -60,7 +60,7 @@ Video showing the 'Follow and shot a robot' abillity: https://youtube.com/shorts
 
   
 ---------------------------------------------------
-#### Follow and shot a marker:
+#### Detect and shot a marker:
 In this part of the project we will present the ability of the robot to search for a mark follow and shot him.
 First we want to rotate the gimbal to see if we recognize any marker,
 as soon as we see a certain marker we will save it and rotate the gimbal again until we recognize the same marker,
