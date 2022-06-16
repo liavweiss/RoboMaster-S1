@@ -69,8 +69,8 @@ def start():
             yaw = 100 * (x - 0.5)
             pitch = 50 * (0.5 - y)
             print('yaw=', yaw, 'pitch=', pitch)
-            pid_Yaw.set_error(x - 0.5)
-            pid_Pitch.set_error(0.5 - y)
+            # pid_Yaw.set_error(x - 0.5)
+            # pid_Pitch.set_error(0.5 - y)
             if abs(yaw) > 2 or abs(pitch) > 2:
                 # Point gimbal to target.
                 gimbal_ctrl.angle_ctrl(yaw_angle + yaw, pitch_angle + pitch)
