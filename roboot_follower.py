@@ -24,7 +24,7 @@ def start():
     # enable detection of S1 robots.
     vision_ctrl.enable_detection(rm_define.vision_detection_car)
     vision_ctrl.set_marker_detection_distance(2)
-    gimbal_ctrl.rotate_with_degree(rm_define.gimbal_up, 20)
+    # gimbal_ctrl.rotate_with_degree(rm_define.gimbal_up, 20)
 
     gun_ctrl.set_fire_count(1)
 
@@ -65,8 +65,8 @@ def start():
             pitchAngle = gimbal_ctrl.get_axis_angle(rm_define.gimbal_axis_pitch)
 
             # Compute yaw and pitch angle offsets  how much we need to move
-            yaw = 100 * (x - 0.5)
-            pitch = 50 * (0.5 - y)
+            yaw = 96 * (x - 0.5)
+            pitch = 54 * (0.5 - y)
 
             if abs(yaw) > 2 or abs(pitch) > 2:
                 # Point gimbal to target.
