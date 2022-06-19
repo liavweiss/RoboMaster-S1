@@ -1,3 +1,15 @@
+
+#################################################################################################################
+#                                           RoboMaster Project                                                  #
+#                                                                                                               #
+#                                   Amichai Kafka & Liav weiss & Omer Michael                                   #
+#################################################################################################################
+
+# This program allow robomaster to track other robot while keeping distance from it.
+# When the robot identify other robot it measures the distance from it, that's done using the know height and the
+# relative height that robomaster see of this robot.
+# According to the distance robomaster advances to the robot or moves away from the robot
+
 def start():
     # enable detection of S1 robots.
     vision_ctrl.enable_detection(rm_define.vision_detection_car)
