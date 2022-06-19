@@ -13,6 +13,11 @@ https://github.com/liavweiss/RoboMaster-S1/blob/70f83f5c430b67095b0e0a55d4a091fe
 ![https://github.com/liavweiss/RoboMaster-S1/blob/main/docs/Coordinate system2.jpg](https://github.com/liavweiss/RoboMaster-S1/blob/70f83f5c430b67095b0e0a55d4a091fe48e87598/docs/Coordinate%20system2.jpg)
 
 --------------------------------------------------
+### RoboMaster-S1 Object detection
+![https://github.com/liavweiss/RoboMaster-S1/blob/76bdc4007851572f1f046a69eb888bb8fbb53f47/docs/Object%20detection.jpg](https://github.com/liavweiss/RoboMaster-S1/blob/76bdc4007851572f1f046a69eb888bb8fbb53f47/docs/Object%20detection.jpg)
+* In the picture: Robomaster s1 vision prespctive from the camera.
+* When thr robot detect an object in order to compute the error (how much to move the gimble) we need to subtract 0.5, which is the center point of view of robomaster.  
+--------------------------------------------------
 ### Robot abilities:
 * Change light with simple claps hand.
 * Shot a person.
