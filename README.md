@@ -24,7 +24,8 @@ https://github.com/liavweiss/RoboMaster-S1/blob/70f83f5c430b67095b0e0a55d4a091fe
 * Follow after line.
 * Follow and shot a person.
 * Follow and shot a robot.
-* Detect and shot a marker
+* Detect and shot a marker.
+* Follow robot while keeping distance.
 ---------------------------------------------------
 #### Change light with simple claps hand:
 In this part of the project we will present the ability of the robot to change lighting with simple claps hand.
@@ -80,7 +81,16 @@ as soon as we see a certain marker we will save it and rotate the gimbal again u
 as soon as we recognize the same marker we will make a slow move to it and shoot at it.
 It is important to note that if we see on the way another marker we will ignore it.
 
-Video showing the 'Follow and shot a marker' abillity: https://youtube.com/shorts/ZrU5j08cnVE?feature=share
+Video showing the 'Detect and shot a marker' abillity: https://youtube.com/shorts/iSgHYdhswEE
+
+--------------------------------------------------------
+#### Follow robot while keeping distance:
+In this part of the project we will present the ability of the robot to track other robot while keeping distance from it.
+When the robot identify other robot it measures the distance from it, that's done using the know height and the
+relative height that robomaster see of this robot.
+According to the distance robomaster advances to the robot or moves away from the robot
+
+Video showing the 'Follow robot while keeping distance' abillity: https://youtu.be/QBBMWX5md80
 
 --------------------------------------------------------
 ### our experiment:
