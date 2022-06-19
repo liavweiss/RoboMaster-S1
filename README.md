@@ -5,7 +5,13 @@
 
 ### Introduction:
 In this project we present different abilities of the robot to perform autonomous tasks.  
-The robot abilities:
+
+### RoboMaster-S1 Coordinate system:
+* ![Coordinate system1](https://github.com/liavweiss/RoboMaster-S1/blob/main/docs/Coordinate system1.jpg)
+* ![RoboMaster](https://github.com/liavweiss/RoboMaster-S1/blob/main/docs/Coordinate system2.jpg)
+
+--------------------------------------------------
+### Robot abilities:
 * Change light with simple claps hand.
 * Shot a person.
 * Follow after line.
