@@ -134,4 +134,7 @@ https://www.youtube.com/watch?v=L-c5KgZZA_0&ab_channel=Science%26Imagination
 <!-- EXTERNAL DOCSS -->
 ### External docs
 * [RoboMaster](https://en.wikipedia.org/wiki/RoboMaster) - More about RoboMaster.
+-----------------------------------------------
+### Important links
+* [https://www.dji.com/robomaster-s1/downloads](https://www.dji.com/robomaster-s1/downloads)- Robomaster s1 APP.
 
